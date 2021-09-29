@@ -9,7 +9,7 @@
     "url": "https://github.com/jdalrymple/gitbeaker/issues"
   },
   "dependencies": {
-    "@gitbeaker/requester-utils": "file:../requester-utils",
+    "@gitbeaker/requester-utils": "https://gitpkg.now.sh/toniopelo/gitbeaker/packages/requester-utils?patched-build",
     "form-data": "^4.0.0",
     "li": "^1.3.0",
     "mime-types": "^2.1.32",

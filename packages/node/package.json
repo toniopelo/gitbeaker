@@ -9,8 +9,8 @@
     "url": "https://github.com/jdalrymple/gitbeaker/issues"
   },
   "dependencies": {
-    "@gitbeaker/core": "file:../core",
-    "@gitbeaker/requester-utils": "file:../requester-utils",
+    "@gitbeaker/core": "https://gitpkg.now.sh/toniopelo/gitbeaker/packages/core?patched-build",
+    "@gitbeaker/requester-utils": "https://gitpkg.now.sh/toniopelo/gitbeaker/packages/requester-utils?patched-build",
     "delay": "^5.0.0",
     "got": "^11.8.2",
     "xcase": "^2.0.1"
