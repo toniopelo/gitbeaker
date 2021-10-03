@@ -1,5 +1,5 @@
 import ky from 'ky';
-import { Agent } from 'https';
+// import { Agent } from 'https';
 import delay from 'delay';
 import {
   DefaultResourceOptions,
@@ -12,21 +12,18 @@ import {
 export function defaultOptionsHandler(
   serviceOptions: DefaultResourceOptions,
   options: DefaultRequestOptions = {},
-): DefaultRequestReturn & { agent?: Agent } {
-  const opts: DefaultRequestReturn & { agent?: Agent } = baseOptionsHandler(
-    serviceOptions,
-    options,
-  );
+): DefaultRequestReturn {
+  const opts: DefaultRequestReturn = baseOptionsHandler(serviceOptions, options);
 
-  if (
-    serviceOptions.url.includes('https') &&
-    serviceOptions.rejectUnauthorized != null &&
-    serviceOptions.rejectUnauthorized === false
-  ) {
-    opts.agent = new Agent({
-      rejectUnauthorized: serviceOptions.rejectUnauthorized,
-    });
-  }
+  // if (
+  //   serviceOptions.url.includes('https') &&
+  //   serviceOptions.rejectUnauthorized != null &&
+  //   serviceOptions.rejectUnauthorized === false
+  // ) {
+  //   opts.agent = new Agent({
+  //     rejectUnauthorized: serviceOptions.rejectUnauthorized,
+  //   });
+  // }
 
   return { ...opts, headers: new Headers(serviceOptions.headers as Record<string, string>) };
 }
